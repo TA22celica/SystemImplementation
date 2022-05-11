@@ -1,0 +1,151 @@
+
+body {
+
+  background: #990617;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+#main {
+
+  width: 85%;
+  background: #fcf7f2;
+  padding: 25px;
+  margin: 40px auto;
+  border-radius: 15px;
+  height: auto;
+
+}
+
+.cardmain {
+  width: 100%;
+  height: 400px;
+}
+
+.card {
+  width: 200px;
+  height: auto;
+  background: white;
+  text-align: center;
+  box-shadow:0px 0px 10px 5px lightgray;
+}
+
+.bold {
+
+  font-weight: bold;
+
+}
+
+.productpic {
+
+  width: 30%;
+  float: left;
+  padding-right: 10%;
+  border-radius: 9%;
+  
+
+}
+
+.productdetail {
+
+  width: 20%;
+  float:left;
+  border-radius: 15px;
+
+}
+
+#slides{
+  position: relative;
+  height: 150px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  border-radius: 15px;
+  box-shadow: #b4cfca;
+
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  border-radius: 15px;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+
+* {box-sizing:border-box;  border-radius: 15px;}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  border-radius: 9%;
+
+}
+/* Caption text */
+.text {
+  color: #494949;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #494949;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: rgb(126, 125, 125);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 9%}
+}
