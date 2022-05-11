@@ -11,7 +11,7 @@
 
     <!-- header - start-->
     <div style="float:left; width: 650px;">
-      <a href="index.php"><img src="http://localhost/php_ecommerce-master/System%20Implementation%20-%20Project%20Final/Photos/indiana_university_logo.png" alt="" width="300px" border-radius: "11px";/></a>
+      <a href="index.php"><img src="http://localhost/SystemImplementation/Photos/indiana_university_logo.png" alt="" width="300px" border-radius: "11px";/></a>
       <p>Welcome to IU Guitar Shop!</p>
 
     </div>
