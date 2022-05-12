@@ -18,7 +18,7 @@ require_once 'header.php';
 if (isset($_POST['buy'])){
 
 
-  foreach( $_SESSION["shopcart"] as $id => $item) {
+  foreach( $_SESSION["cart"] as $id => $item) {
 
     $sql = "INSERT INTO orders (order_id, customer_id, product_id, product_name, amount, date) VALUES (NULL, ?, ?, ?, ?, CURRENT_TIMESTAMP)" ;
     $stmt = $db->prepare($sql) ;
@@ -27,7 +27,7 @@ if (isset($_POST['buy'])){
   }
 
   
-  unset($_SESSION['shopcart']);
+  unset($_SESSION['cart']);
   echo 'Operation cannot be done.<br><a href="index.php">Back to homepage</a>';
   require_once 'footer.php';
   exit();
@@ -35,16 +35,16 @@ if (isset($_POST['buy'])){
 }
 
 // display all cart data
-if ( isset($_SESSION["shopcart"])) {
+if ( isset($_SESSION["cart"])) {
   $total=0;
 
-  foreach( $_SESSION["shopcart"] as $id => $item) {
+  foreach( $_SESSION["cart"] as $id => $item) {
     print "<b>Product name: </b>{$item["name"]} ";
     print "<b>Price : </b>{$item["price"]}</p>";
     $total+= $item['price'];
   }
 
-  echo "<br><p><b>Total product :</b> " . count($_SESSION["shopcart"]) . "</p>";
+  echo "<br><p><b>Total product :</b> " . count($_SESSION["cart"]) . "</p>";
   echo "<b>Total price= </b>".$total."<br><br>";
 
   echo '<form action="" method="post"><input type="submit" name="buy" value="COMPLETE"></form>';

@@ -123,7 +123,6 @@ require_once 'header.php';
     if ($buy==1) {
       if (!empty($_SESSION["user"])) {
 
-        echo "<br>No User.";
         $_SESSION["cart"][$product['id']] = ["name" => $product['name'] ,  "price" => $product['price'], "id" => $product['id'] ] ;
 
       }
